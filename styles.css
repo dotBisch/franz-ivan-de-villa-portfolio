@@ -262,6 +262,10 @@ section {
     gap: var(--space-sm);
 }
 
+#contact{
+    margin-bottom: 250px;
+}
+
 .contact-container {
     max-width: 600px;
     margin: 0 auto;
