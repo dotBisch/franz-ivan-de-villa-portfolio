@@ -9,35 +9,23 @@ View the demo [here](https://demo.magic-portfolio.com).
 ## Getting started
 
 **1. Clone the repository**
-```
-git clone https://github.com/once-ui-system/magic-portfolio.git
-```
-
+``ngit clone https://github.com/once-ui-system/magic-portfolio.git
+``n
 **2. Install dependencies**
-```
-npm install
-```
-
+``nnpm install
+``n
 **3. Run dev server**
-```
-npm run dev
-```
-
+``nnpm run dev
+``n
 **4. Edit config**
-```
-src/resources/once-ui.config.js
-```
-
+``nsrc/resources/once-ui.config.js
+``n
 **5. Edit content**
-```
-src/resources/content.js
-```
-
+``nsrc/resources/content.js
+``n
 **6. Create blog posts / projects**
-```
-Add a new .mdx file to src/app/blog/posts or src/app/work/projects
-```
-
+``nAdd a new .mdx file to src/app/blog/posts or src/app/work/projects
+``n
 Magic Portfolio was built with [Once UI](https://once-ui.com) for [Next.js](https://nextjs.org). It requires Node.js v18.17+.
 
 ## Documentation
@@ -84,7 +72,7 @@ Distributed under the CC BY-NC 4.0 License.
 - Commercial usage is not allowed.
 - You can extend the license to [Dopler CC](https://dopler.app/license) by purchasing a [Once UI Pro](https://once-ui.com/pricing) license.
 
-See `LICENSE.txt` for more information.
+See LICENSE.txt for more information.
 
 ## Deploy with Vercel
 
