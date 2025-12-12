@@ -11,16 +11,15 @@ import {
   SocialSharingConfig,
   StyleConfig,
 } from "@/types";
-import { home } from "./index";
+import { about } from "./index";
+
 
 // IMPORTANT: Replace with your own domain address - it's used for SEO in meta tags and schema
-const baseURL: string = "https://demo.magic-portfolio.com";
+const baseURL: string = "https://franz-ivan-de-villa-portfolio.vercel.app/";
 
 const routes: RoutesConfig = {
   "/": true,
-  "/about": true,
   "/work": true,
-  "/blog": true,
   "/gallery": true,
 };
 
@@ -189,7 +188,7 @@ const schema: SchemaConfig = {
   logo: "",
   type: "Organization",
   name: "Once UI",
-  description: home.description,
+  description: about.description,
   email: "lorant@once-ui.com",
 };
 

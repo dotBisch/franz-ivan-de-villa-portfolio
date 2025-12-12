@@ -8,6 +8,10 @@
     }
 }
 
+.active {
+    text-shadow: 0 0 12px var(--brand-strong);
+}
+
 @media (max-width: breakpoints.$s) {
     .textAlign {
         text-align: center;
