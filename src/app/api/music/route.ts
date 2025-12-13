@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 // @ts-ignore
-import { search } from 'youtube-search-without-api-key';
+import yts from 'yt-search';
 import { LRUCache } from 'lru-cache';
 
 const rateLimit = new LRUCache({
@@ -28,29 +28,15 @@ export async function GET(request: Request) {
     }
 
     try {
-        const videos = await search(term);
+        const r = await yts(term);
+        const videos = r.videos;
 
         if (videos.length === 0) {
             return NextResponse.json({ error: 'No videos found' }, { status: 404 });
         }
 
         // Return the first video ID for playback
-        // The library returns objects with 'id' property (usually { videoId: '...' })
-        // Checking the structure, it usually returns [{ id: { videoId: '...' }, ... }] or similar depending on version.
-        // Let's inspect the first result.
-        // Actually, youtube-search-without-api-key returns an array of objects.
-        // Standard shape: { id: { videoId: '...' }, title: '...', ... } or just { id: '...', title: '...' }
-        // Let's assume standard item.id.videoId or item.id if string.
-
-        // Based on common usage of version 2.x:
-        const firstVideo = videos[0];
-        // Safely extract videoId
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        const videoId = (firstVideo as any).id?.videoId || (firstVideo as any).id || (firstVideo as any).videoId;
-
-        if (!videoId) {
-            return NextResponse.json({ error: 'Invalid video data' }, { status: 404 });
-        }
+        const videoId = videos[0].videoId;
 
         return NextResponse.json({ videoId });
 
