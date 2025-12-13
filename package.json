@@ -13,7 +13,6 @@
     "@mdx-js/loader": "^3.1.0",
     "@next/mdx": "^16.0.7",
     "@once-ui-system/core": "^1.5.6",
-    "cheerio": "^1.1.2",
     "classnames": "^2.5.1",
     "cookie": "^1.0.2",
     "gray-matter": "^4.0.3",
@@ -26,8 +25,7 @@
     "react-icons": "^5.5.0",
     "react-youtube": "^10.1.0",
     "sass": "^1.86.3",
-    "transliteration": "^2.3.5",
-    "yt-search": "^2.13.1"
+    "transliteration": "^2.3.5"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",

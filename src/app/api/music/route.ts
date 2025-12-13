@@ -1,12 +1,38 @@
 import { NextResponse } from 'next/server';
-// @ts-ignore
-import yts from 'yt-search';
 import { LRUCache } from 'lru-cache';
 
 const rateLimit = new LRUCache({
     max: 500,
     ttl: 60 * 1000, // 1 minute
 });
+
+// Simple YouTube search without external dependencies
+async function searchYouTube(query: string): Promise<string | null> {
+    try {
+        // Use YouTube's internal API endpoint
+        const searchUrl = `https://www.youtube.com/results?search_query=${encodeURIComponent(query)}`;
+        const response = await fetch(searchUrl, {
+            headers: {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+            }
+        });
+
+        const html = await response.text();
+
+        // Extract video ID from the HTML using regex
+        // YouTube embeds initial data in the page as JSON
+        const match = html.match(/"videoId":"([^"]{11})"/);
+
+        if (match && match[1]) {
+            return match[1];
+        }
+
+        return null;
+    } catch (error) {
+        console.error('YouTube search error:', error);
+        return null;
+    }
+}
 
 export async function GET(request: Request) {
     const ip = request.headers.get('x-forwarded-for') || '127.0.0.1';
@@ -28,18 +54,13 @@ export async function GET(request: Request) {
     }
 
     try {
-        const r = await yts(term);
-        const videos = r.videos;
+        const videoId = await searchYouTube(term);
 
-        if (videos.length === 0) {
+        if (!videoId) {
             return NextResponse.json({ error: 'No videos found' }, { status: 404 });
         }
 
-        // Return the first video ID for playback
-        const videoId = videos[0].videoId;
-
         return NextResponse.json({ videoId });
-
 
     } catch (error) {
         console.error("YouTube search failed:", error);
