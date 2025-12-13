@@ -17,6 +17,16 @@ const nextConfig = {
         hostname: "www.google.com",
         pathname: "**",
       },
+      {
+        protocol: "https",
+        hostname: "*.mzstatic.com",
+        pathname: "**",
+      },
+      {
+        protocol: "https",
+        hostname: "i.ytimg.com",
+        pathname: "**",
+      },
     ],
   },
   sassOptions: {
