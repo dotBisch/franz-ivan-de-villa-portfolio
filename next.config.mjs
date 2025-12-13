@@ -9,6 +9,32 @@ const withMDX = mdx({
 const nextConfig = {
   pageExtensions: ["ts", "tsx", "md", "mdx"],
   transpilePackages: ["next-mdx-remote"],
+  outputFileTracingIncludes: {
+    '/api/music': ['./node_modules/cheerio/**/*', './node_modules/yt-search/**/*'],
+  },
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      // Ensure cheerio and yt-search are bundled for serverless
+      config.externals = config.externals || [];
+      const externals = Array.isArray(config.externals)
+        ? config.externals
+        : [config.externals];
+
+      config.externals = externals.map((external) => {
+        if (typeof external === 'function') {
+          return (context, request, callback) => {
+            // Don't externalize cheerio or yt-search
+            if (request === 'cheerio' || request === 'yt-search') {
+              return callback();
+            }
+            return external(context, request, callback);
+          };
+        }
+        return external;
+      });
+    }
+    return config;
+  },
   images: {
     remotePatterns: [
       {
