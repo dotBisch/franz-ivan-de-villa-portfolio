@@ -106,14 +106,29 @@ const about: About = {
       {
         name: "Polytechnic University of the Philippines",
         description: <>Bachelor of Science in Computer Science</>,
+        icon: "graduationCap",
+        details: <>
+          Focused on software engineering, data structures, algorithms, and full-stack development.
+          Developed strong foundations in computer science theory and practical application through various projects and coursework.
+        </>,
       },
       {
         name: "Far Eastern University - Cavite",
         description: <>STEM - With High Honors</>,
+        icon: "award",
+        details: <>
+          Completed Senior High School under the Science, Technology, Engineering, and Mathematics (STEM) strand.
+          Graduated with High Honors, demonstrating excellence in mathematics, physics, and computer science fundamentals.
+        </>,
       },
       {
         name: "Batangas Province Science High School",
         description: <>With High Honors</>,
+        icon: "star",
+        details: <>
+          Attended a specialized science high school focused on advanced STEM education.
+          Graduated with High Honors, building a strong foundation in scientific thinking and problem-solving.
+        </>,
       },
     ],
   },
@@ -125,12 +140,12 @@ const about: About = {
         title: "Languages",
         tags: [
           {
-            name: "",
-            icon: "c",
+            name: "C",
+            icon: "",
           },
           {
-            name: "",
-            icon: "csharp",
+            name: "C#",
+            icon: "",
           },
           {
             name: "Java",

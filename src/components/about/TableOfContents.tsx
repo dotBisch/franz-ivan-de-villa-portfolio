@@ -26,7 +26,7 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ structure, about }) =
       const sections = structure
         .filter((section) => section.display)
         .map((section) => section.title);
-      
+
       let current = "";
       for (const section of sections) {
         const element = document.getElementById(section);
@@ -35,12 +35,12 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ structure, about }) =
           // Check if the section is near the top of the viewport
           if (rect.top <= 150 && rect.bottom >= 150) {
             current = section;
-            break; 
+            break;
           } else if (rect.top < 150) {
-             // If we scrolled past it, it might still be the active one if no other is found yet (looping forward)
-             // But actually, iterating and finding the last one that is "above" the threshold is better for "current section" logic usually.
-             // Let's try a different logic: find the one that is closest to top but not too far down.
-             current = section;
+            // If we scrolled past it, it might still be the active one if no other is found yet (looping forward)
+            // But actually, iterating and finding the last one that is "above" the threshold is better for "current section" logic usually.
+            // Let's try a different logic: find the one that is closest to top but not too far down.
+            current = section;
           }
         }
       }
@@ -98,9 +98,10 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ structure, about }) =
                 style={{ transition: "all 0.3s ease" }}
               ></Flex>
               <Text
-                onBackground={activeSection === section.title ? "brand-strong" : "neutral-weak"}
+                onBackground="neutral-weak"
                 style={{
                   transition: "all 0.3s ease",
+                  color: activeSection === section.title ? "var(--brand-on-background-weak)" : undefined,
                 }}
               >
                 {section.title}

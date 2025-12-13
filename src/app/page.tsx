@@ -268,16 +268,56 @@ export default function Home() {
               <Heading as="h2" id={about.studies.title} variant="display-strong-s" marginBottom="m">
                 {about.studies.title}
               </Heading>
-              <Column fillWidth gap="l" marginBottom="40">
+              <Column fillWidth gap="24" marginBottom="40" style={{ position: "relative" }}>
+                {/* Vertical timeline line */}
+                <Column
+                  style={{
+                    position: "absolute",
+                    left: "20px",
+                    top: "32px",
+                    bottom: "32px",
+                    width: "2px",
+                    background: "var(--neutral-border-medium)",
+                  }}
+                />
                 {about.studies.institutions.map((institution, index) => (
-                  <Column key={`${institution.name}-${index}`} fillWidth gap="4">
-                    <Text id={institution.name} variant="heading-strong-l">
-                      {institution.name}
-                    </Text>
-                    <Text variant="heading-default-xs" onBackground="neutral-weak">
-                      {institution.description}
-                    </Text>
-                  </Column>
+                  <Row key={`${institution.name}-${index}`} fillWidth gap="16" vertical="start">
+                    {/* Icon circle */}
+                    <Column
+                      style={{
+                        position: "relative",
+                        zIndex: 1,
+                        minWidth: "40px",
+                        width: "40px",
+                        height: "40px",
+                        borderRadius: "50%",
+                        border: "2px solid var(--neutral-border-strong)",
+                        background: "var(--page-background)",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                      }}
+                    >
+                      {institution.icon && (
+                        <Icon name={institution.icon} onBackground="neutral-strong" size="s" />
+                      )}
+                    </Column>
+
+                    {/* Content */}
+                    <Column fillWidth gap="8" paddingTop="4">
+                      <Text id={institution.name} variant="heading-strong-l">
+                        {institution.name}
+                      </Text>
+                      <Text variant="body-default-s" onBackground="brand-weak">
+                        {institution.description}
+                      </Text>
+                      {institution.details && (
+                        <Text variant="body-default-m" onBackground="neutral-weak" marginTop="4">
+                          {institution.details}
+                        </Text>
+                      )}
+                    </Column>
+                  </Row>
                 ))}
               </Column>
             </>

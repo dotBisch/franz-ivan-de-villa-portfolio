@@ -177,6 +177,10 @@ export interface About extends BasePageConfig {
       name: string;
       /** Description of studies */
       description: React.ReactNode;
+      /** Optional icon for the institution */
+      icon?: IconName;
+      /** Optional detailed description */
+      details?: React.ReactNode;
     }>;
   };
   /** Technical skills section */
@@ -217,7 +221,7 @@ export interface About extends BasePageConfig {
  * Work/projects page configuration.
  * @description Configuration for the Work/Projects page, including metadata and navigation label.
  */
-export interface Work extends BasePageConfig {}
+export interface Work extends BasePageConfig { }
 
 /**
  * Gallery page configuration.
