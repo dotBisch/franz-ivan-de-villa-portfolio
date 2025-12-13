@@ -10,7 +10,21 @@ const nextConfig = {
   pageExtensions: ["ts", "tsx", "md", "mdx"],
   transpilePackages: ["next-mdx-remote"],
   outputFileTracingIncludes: {
-    '/api/music': ['./node_modules/cheerio/**/*', './node_modules/yt-search/**/*'],
+    '/api/music': [
+      './node_modules/cheerio/**/*',
+      './node_modules/yt-search/**/*',
+      './node_modules/domutils/**/*',
+      './node_modules/domhandler/**/*',
+      './node_modules/htmlparser2/**/*',
+      './node_modules/cheerio-select/**/*',
+      './node_modules/dom-serializer/**/*',
+      './node_modules/parse5/**/*',
+      './node_modules/parse5-htmlparser2-tree-adapter/**/*',
+      './node_modules/parse5-parser-stream/**/*',
+      './node_modules/undici/**/*',
+      './node_modules/whatwg-mimetype/**/*',
+      './node_modules/encoding-sniffer/**/*',
+    ],
   },
   webpack: (config, { isServer }) => {
     if (isServer) {
