@@ -186,17 +186,17 @@ const mailchimp: MailchimpConfig = {
 // default schema data
 const schema: SchemaConfig = {
   logo: "",
-  type: "Organization",
-  name: "Once UI",
-  description: about.description,
-  email: "lorant@once-ui.com",
+  type: "Person",
+  name: "Franz Ivan De Villa",
+  description: "Software Developer Intern specializing in Full-Stack Development with React, TypeScript, Next.js, and Laravel",
+  email: "franzivan.devilla@gmail.com",
 };
 
 // social links
 const sameAs: SameAsConfig = {
-  threads: "https://www.threads.com/@once_ui",
-  linkedin: "https://www.linkedin.com/company/once-ui/",
-  discord: "https://discord.com/invite/5EyAQ4eNdS",
+  github: "https://github.com/dotBisch/",
+  linkedin: "https://www.linkedin.com/in/franz-ivan-de-villa-9928a0289/",
+  instagram: "https://www.instagram.com/f_ivandv/",
 };
 
 // social sharing configuration for blog posts

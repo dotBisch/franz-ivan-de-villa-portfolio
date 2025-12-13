@@ -52,7 +52,7 @@ const about: About = {
   path: "/",
   label: "About",
   title: `About – ${person.name}`,
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  description: `Franz Ivan De Villa - Software Developer Intern specializing in Full-Stack Development with React, TypeScript, Next.js, and Laravel. Based in Manila, Philippines. Experienced in backend optimization, SQL, and modern web development.`,
   tableOfContent: {
     display: true,
     subItems: false,
@@ -69,8 +69,8 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Franz Ivan R. De Villa is a flexible developer specializing in the logical architecture 
-        required to make systems work efficiently. His work spans full-stack development, 
+        Franz Ivan R. De Villa is a flexible developer specializing in the logical architecture
+        required to make systems work efficiently. His work spans full-stack development,
         ranging from optimizing backend data layers and SQL logic to crafting responsive user interfaces with React and TypeScript.
       </>
     ),
@@ -85,11 +85,11 @@ const about: About = {
         role: "Software Developer Intern",
         achievements: [
           <>
-            Refactored backend data layer by optimizing SQL query logic and modularizing server-side components, improving system performance, 
+            Refactored backend data layer by optimizing SQL query logic and modularizing server-side components, improving system performance,
             maintainability, and data integrity across lead and client endpoints.
           </>,
           <>
-            Built modal-based "Update Lead" workflow using React (TypeScript) and Inertia.js, integrating frontend validation 
+            Built modal-based "Update Lead" workflow using React (TypeScript) and Inertia.js, integrating frontend validation
             and backend synchronization to streamline data editing and user efficiency.
           </>,
         ],
@@ -111,7 +111,7 @@ const about: About = {
         name: "Far Eastern University - Cavite",
         description: <>STEM - With High Honors</>,
       },
-            {
+      {
         name: "Batangas Province Science High School",
         description: <>With High Honors</>,
       },
@@ -239,7 +239,7 @@ const work: Work = {
   path: "/404",
   label: "Projects",
   title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
+  description: `Software development projects and portfolio by Franz Ivan De Villa. Showcasing full-stack web applications, React projects, and innovative solutions using modern technologies.`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
 };
@@ -248,7 +248,7 @@ const gallery: Gallery = {
   path: "/404",
   label: "Gallery",
   title: `Photo gallery – ${person.name}`,
-  description: `A photo collection by ${person.name}`,
+  description: `Professional photo gallery and visual portfolio by Franz Ivan De Villa. Explore creative photography and design work.`,
   // Images by https://lorant.one
   // These are placeholder images, replace with your own
   images: [
