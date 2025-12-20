@@ -275,7 +275,7 @@ const gallery: Gallery = {
       type: "video"
     },
     {
-      src: "/images/gallery/vertical-4.JPG",
+      src: "/images/gallery/vertical-4.jpg",
       alt: "image",
       orientation: "vertical",
     },
@@ -285,7 +285,7 @@ const gallery: Gallery = {
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/vertical-1.JPG",
+      src: "/images/gallery/vertical-1.jpg",
       alt: "image",
       orientation: "vertical",
     },
@@ -295,7 +295,7 @@ const gallery: Gallery = {
       orientation: "vertical",
     },
     {
-      src: "/images/gallery/horizontal-2.JPG",
+      src: "/images/gallery/horizontal-2.jpg",
       alt: "image",
       orientation: "horizontal",
     },
@@ -305,7 +305,7 @@ const gallery: Gallery = {
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/vertical-3.JPG",
+      src: "/images/gallery/vertical-3.jpg",
       alt: "image",
       orientation: "vertical",
     },
