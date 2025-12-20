@@ -236,5 +236,7 @@ export interface Gallery extends BasePageConfig {
     alt: string;
     /** Image orientation (horizontal/vertical) */
     orientation: string;
+    /** Media type (image/video) - defaults to image if not specified */
+    type?: "image" | "video";
   }>;
 }

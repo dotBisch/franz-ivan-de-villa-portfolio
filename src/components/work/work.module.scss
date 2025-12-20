@@ -1,0 +1,52 @@
+.hover {
+    transition: var(--transition-micro-medium);
+
+    &:hover {
+        transform: translateX(var(--static-space-8));
+    }
+}
+
+.projectImage {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: var(--radius-m);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: scale(1.02);
+
+        .projectOverlay {
+            opacity: 1;
+        }
+    }
+}
+
+.projectOverlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.projectPreview {
+    position: relative;
+    width: 100%;
+    // aspect-ratio: 16 / 9; // Removed to allow indicators to flow below
+    // overflow: hidden;     // Removed to prevent clipping of external indicators
+}
+
+.avatar {
+    @media (max-width: 768px) {
+        position: relative !important;
+        top: auto !important;
+    }
+}

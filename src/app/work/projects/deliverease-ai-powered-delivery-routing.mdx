@@ -1,0 +1,52 @@
+---
+title: "DeliverEase: A* Star Algorithm Powered Delivery Routing"
+publishedAt: "2025-12-20"
+summary: "A prototype delivery routing system that optimizes logistics by employing the A* search algorithm to find the most efficient paths for delivery partners."
+category: "Main Projects"
+role: "Lead Developer"
+images:
+  - "/images/my_projects/DeliverEase/DeliverEase1.png"
+  - "/images/my_projects/DeliverEase/DeliverEase2.png"
+  - "/images/my_projects/DeliverEase/DeliverEase3.png"
+  - "/images/my_projects/DeliverEase/DeliverEase4.png"
+techStack:
+  - "Python"
+  - "Django"
+  - "HTML/CSS"
+  - "JavaScript"
+  - "SQLite"
+  - "A* Search Algorithm"
+team:
+  - name: "feiryrej"
+    role: "Lead Developer"
+    avatar: "/images/avatar-1.png"
+    linkedIn: "https://www.linkedin.com/in/feiryrej/"
+---
+
+## Overview
+
+DeliverEase is an innovative platform prototype designed to empower delivery partners and foster seamless connections between buyers and sellers without the need for intermediaries. The core of the system is a sophisticated routing engine that uses the A* search algorithm to calculate the most efficient routes, reducing delivery times and operational costs. By prioritizing shortest-path calculations and real-time efficiency, DeliverEase aims to revolutionize how goods are moved within communities.
+
+## Key Features
+
+- **Optimal Route Calculation**: Leverages the A* Search Algorithm to find the fastest path between pickup and drop-off locations, outperforming traditional static models in heuristic-based real-time systems.
+- **Direct Marketplace Connection**: Facilitates a direct channel between buyers and sellers, allowing for efficient order placement and pickup details without third-party interference.
+- **Automated Job Posting**: Sellers can instantly post delivery jobs with specific details, while the system assigns the nearest available partner to the task.
+- **Delivery Verification**: Includes a secure OTP-based completion system to ensure that orders are accurately handed over and recorded by both parties.
+
+## Technologies Used
+
+- **A* Search Algorithm**: Used as the primary heuristic-driven pathfinding logic to achieve superior routing efficiency.
+- **Python & Django**: The backend framework used to manage order logistics, user data, and server-side operations.
+- **HTML/CSS & JavaScript**: Employed for the front-end to provide a user-friendly, responsive interface for tracking and managing deliveries.
+- **SQLite (via Django)**: For persistent storage of order details, user profiles, and delivery status logs.
+
+## Challenges and Learnings
+
+A significant challenge was balancing algorithm complexity with real-time performance. While algorithms like Dijkstra are effective for static graphs, implementing A* required careful calibration of heuristic functions to handle dynamic urban delivery variables efficiently. Additionally, building a "trust-less" connection between buyers and sellers required the implementation of robust confirmation features, such as the OTP system, to mitigate the risks associated with removing intermediaries.
+
+## Outcome
+
+The DeliverEase prototype successfully demonstrates how algorithmic optimization can streamline urban logistics. By bypassing traditional intermediaries, the system facilitates faster deliveries and lower costs. The integration of the A* algorithm provides a scalable foundation for future enhancements, such as dynamic traffic integration and multi-point travel optimization.
+
+[Project Link](https://github.com/feiryrej/DeliverEase)

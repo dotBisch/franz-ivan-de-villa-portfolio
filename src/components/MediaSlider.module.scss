@@ -1,0 +1,92 @@
+.sliderContainer {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.mediaWrapper {
+    position: relative;
+    width: 100%;
+    // Maintain aspect ratio via the Media component, so explicit height might not be needed if aspect-ratio works,
+    // but usually width: 100% works fine.
+
+    :global(img) {
+        object-fit: contain !important;
+    }
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 0;
+    pointer-events: none;
+
+    &.active {
+        opacity: 1;
+        z-index: 1;
+        pointer-events: auto;
+    }
+}
+
+.navButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+    :global(button) {
+        background: rgba(0, 0, 0, 0.4) !important;
+        border: 1px solid #000000 !important;
+        backdrop-filter: blur(8px);
+        color: white !important;
+        transition: all 0.2s ease;
+
+        &:hover {
+            background: rgba(0, 0, 0, 0.7) !important;
+        }
+    }
+}
+
+.mediaWrapper:hover .navButton {
+    opacity: 1;
+}
+
+.indicatorsContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 0 16px;
+}
+
+.indicator {
+    height: 4px;
+    width: 100%;
+    max-width: 40px;
+    border-radius: 4px;
+    cursor: pointer;
+    background: var(--neutral-weak); // Fallback or theme var
+    transition: all 0.3s ease;
+
+    // Default state (inactive)
+    background-color: var(--neutral-on-background-weak);
+    opacity: 0.3;
+}
+
+.indicator:hover {
+    opacity: 0.6;
+}
+
+.indicatorActive {
+    background-color: var(--neutral-on-background-strong) !important;
+    opacity: 1 !important;
+}

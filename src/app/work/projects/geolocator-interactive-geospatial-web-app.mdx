@@ -1,0 +1,58 @@
+---
+title: "GeoLocator: Interactive Geospatial Web App"
+publishedAt: "2025-12-20"
+summary: "A modern geolocation tracking application featuring IP-based location search, interactive maps, and cloud-based search history persistence using React, Leaflet, and Supabase."
+category: "Personal Projects"
+role: "Full Stack Developer"
+images:
+  - "/images/my_projects/GeoLocator/GeoLocator1.png"
+  - "/images/my_projects/GeoLocator/GeoLocator2.png"
+  
+techStack:
+  - "React"
+  - "TypeScript"
+  - "Leaflet"
+  - "Supabase"
+team:
+  - name: "Franz Ivan"
+    role: "Lead Developer"
+    avatar: "/images/avatar-1.png"
+    linkedIn: "https://www.linkedin.com/in/mwapsam/"
+---
+
+## Overview
+
+GeoLocator is a specialized web application built to explore the full potential of IP-based geolocation services. The project leverages modern React architecture with TypeScript for type safety, combined with Leaflet's powerful mapping capabilities and Supabase's backend-as-a-service platform. This creates a seamless experience for tracking and visualizing geographical locations based on IP addresses, with persistent search history and user authentication.
+
+## Key Features
+
+- **IP Geolocation Tracking**: Utilizes IP geolocation APIs (ipinfo.io) to retrieve detailed location information for any IP address, including coordinates, city, region, and timezone
+- **Interactive Leaflet Maps**: Implements React Leaflet with custom map markers featuring dynamic labels and smooth flyTo animations for enhanced user experience
+- **User Authentication**: Secure sign-up and login system powered by Supabase Auth, ensuring data privacy and personalized experiences
+- **Cloud-Based Search History**: Persistent storage of search history using Supabase PostgreSQL database, accessible across devices and sessions
+- **Responsive Design**: Mobile-first approach with collapsible sidebars and adaptive layouts for seamless desktop and mobile experiences
+- **Real-time Location Detection**: Automatically detects and displays the user's current location on initial load
+- **Bulk History Management**: Advanced features including multi-select, bulk deletion, and individual history item management
+
+## Technologies Used
+
+- **React 19**: Modern frontend framework with latest features for building interactive user interfaces
+- **TypeScript**: Static typing for improved code quality, maintainability, and developer experience
+- **Vite**: Next-generation build tool providing lightning-fast development server and optimized production builds
+- **Leaflet & React Leaflet**: Open-source mapping library for interactive, mobile-friendly maps with custom markers and controls
+- **Supabase**: Backend-as-a-Service platform handling authentication, PostgreSQL database, and real-time data synchronization
+- **React Router DOM**: Client-side routing with protected routes and authentication guards
+- **Tailwind CSS**: Utility-first CSS framework for rapid UI development
+- **Lucide React**: Modern icon library for clean, consistent UI elements
+
+## Challenges and Learnings
+
+One of the primary challenges was implementing a robust fallback system that gracefully handles API failures while maintaining functionality. The application implements a dual-authentication approach supporting both Supabase Auth and mock authentication for development. Managing state synchronization between Supabase cloud storage and local storage required careful consideration of error handling and offline scenarios.
+
+Another significant learning was optimizing Leaflet map performance with React's rendering lifecycle. Using custom hooks (useMap) and controlled re-renders ensured smooth map interactions and animations without unnecessary component updates. The implementation of bulk selection and deletion features also required thoughtful state management to maintain UI responsiveness.
+
+## Outcome
+
+The GeoLocator web app successfully demonstrates how to build production-ready geolocation services using modern React ecosystem tools. It serves as a comprehensive example for implementing location-based features, user authentication, and cloud data persistence. The project showcases the efficiency of the "React + TypeScript + Supabase" stack in delivering high-performance, scalable web applications with minimal backend infrastructure management. The modular architecture makes it easily extensible for additional features like location sharing, route tracking, or integration with other mapping services.
+
+[Project Link](https://github.com/dotBisch/geolocator-webapp)

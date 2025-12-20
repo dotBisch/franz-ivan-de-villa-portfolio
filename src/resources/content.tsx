@@ -251,7 +251,7 @@ const about: About = {
 };
 
 const work: Work = {
-  path: "/404",
+  path: "/work",
   label: "Projects",
   title: `Projects – ${person.name}`,
   description: `Software development projects and portfolio by Franz Ivan De Villa. Showcasing full-stack web applications, React projects, and innovative solutions using modern technologies.`,
@@ -260,7 +260,7 @@ const work: Work = {
 };
 
 const gallery: Gallery = {
-  path: "/404",
+  path: "/gallery",
   label: "Gallery",
   title: `Photo gallery – ${person.name}`,
   description: `Professional photo gallery and visual portfolio by Franz Ivan De Villa. Explore creative photography and design work.`,
@@ -268,12 +268,14 @@ const gallery: Gallery = {
   // These are placeholder images, replace with your own
   images: [
     {
-      src: "/images/gallery/horizontal-1.jpg",
+
+      src: "/images/gallery/horizontal-1.mp4",
       alt: "image",
       orientation: "horizontal",
+      type: "video"
     },
     {
-      src: "/images/gallery/vertical-4.jpg",
+      src: "/images/gallery/vertical-4.JPG",
       alt: "image",
       orientation: "vertical",
     },
@@ -283,7 +285,7 @@ const gallery: Gallery = {
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/vertical-1.jpg",
+      src: "/images/gallery/vertical-1.JPG",
       alt: "image",
       orientation: "vertical",
     },
@@ -293,7 +295,7 @@ const gallery: Gallery = {
       orientation: "vertical",
     },
     {
-      src: "/images/gallery/horizontal-2.jpg",
+      src: "/images/gallery/horizontal-2.JPG",
       alt: "image",
       orientation: "horizontal",
     },
@@ -303,7 +305,7 @@ const gallery: Gallery = {
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/vertical-3.jpg",
+      src: "/images/gallery/vertical-3.JPG",
       alt: "image",
       orientation: "vertical",
     },
